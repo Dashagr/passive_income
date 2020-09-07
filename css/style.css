@@ -439,6 +439,14 @@ header #timer .date .time-section .units {
   padding: 2rem 0;
   border: 0;
   border-radius: 0;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#selection .selections .card:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 #selection .selections .card img {
   width: 36px;
