@@ -36,7 +36,7 @@ h4 {
 }
 
 header {
-    background: url('/img/skyscrap1.jpg') center no-repeat $dark-color;
+    background: url('../img/skyscrap1.jpg') center no-repeat $dark-color;
     background-size: cover;
     padding: 3em;
     width: 100%;
@@ -285,7 +285,7 @@ header {
 }
 
 #questions {
-    background: url('/img/land3.jpg') center top no-repeat;
+    background: url('../img/land3.jpg') center top no-repeat;
     background-size: cover;
     text-align: center;
     color: $light-color;
