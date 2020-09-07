@@ -267,10 +267,14 @@ h4 {
   font-size: 2em;
 }
 
+h5 {
+  font-size: 1rem;
+}
+
 header {
   background: url("../img/skyscrap1.jpg") center no-repeat #000;
   background-size: cover;
-  padding: 3em;
+  padding: 3em 0 6em 0;
   width: 100%;
 }
 header .start-form {
@@ -400,12 +404,15 @@ header #timer .date .time-section .units {
 #advantages .advantages .card {
   border: none;
 }
+#advantages .advantages .card .card-body {
+  padding: 1rem 0 0 0;
+}
 #advantages .advantages .card i {
   font-size: 3em;
 }
 #advantages .advantages .card .card-title {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 #mentor img {
@@ -426,6 +433,9 @@ header #timer .date .time-section .units {
   width: 20px;
   background: url("../img/li.png") no-repeat;
   background-position: left 2px;
+}
+#mentor li:hover {
+  opacity: 0.8;
 }
 
 #selection {
@@ -470,7 +480,7 @@ header #timer .date .time-section .units {
 }
 
 #reviews {
-  margin: 6em 0;
+  margin: 8em 0 6em 0;
 }
 #reviews .reviews {
   margin-top: 5em;
