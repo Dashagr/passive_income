@@ -1,0 +1,346 @@
+@import "normalize.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+body {
+    //  font-family: "Courier new",  sans-serif;
+    font-size: 16px;
+    color: $font;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: $light-color;
+}
+
+h2 {
+    @include heading(400, $icons-color);
+    text-align: center;
+}
+
+h3 {
+    @include heading(300, $icons-color2);
+    justify-content: flex-start;
+    font-size: 1.4em;
+
+    &:after {
+        left: 0;
+    }
+}
+
+h4 {
+    font-size: 2em;
+}
+
+header {
+    background: url('/img/skyscrap1.jpg') center no-repeat $dark-color;
+    background-size: cover;
+    padding: 3em;
+    width: 100%;
+
+    .start-form {
+        margin-top: 3em;
+    }
+
+    form {
+        background: $light-color;
+        padding: 2em;
+        text-align: center;
+
+        p {
+            margin-bottom: 2em;
+        }
+
+        label {
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        .form-control {
+            padding: 1.2em;
+
+            &::placeholder {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .description {
+        p {
+            color: $light-color;
+            font-weight: 300;
+            font-size: 1.5em;
+
+            span {
+                background: $marker-color1;
+            }
+
+            .marker {
+                background: $marker-color2;
+                padding: 0 5px;
+            }
+        }
+    }
+
+    #timer {
+        font-size: 2em;
+        color: $light-color;
+        font-weight: 300;
+        letter-spacing: .25em;
+
+        .date {
+
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+
+            &:not(:nth-child(4)):after {
+                content: ' : ';
+            }
+
+            .time-section {
+
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                margin: 0 .5em;
+                letter-spacing: .05em;
+
+                .units {
+                    font-size: .4em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.start {
+    margin-top: 2em;
+    padding: 0.4rem 1.6rem;
+    background: $btn-start;
+    border: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 500;
+
+    &:hover {
+        background: $btn-start-hover;
+    }
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+
+    .start__longer {
+        border-radius: 0px;
+        background: $btn-start-longer;
+
+        &:hover {
+            background: $btn-start-hover;
+        }
+    }
+}
+
+.start-form {
+    margin-top: 0em;
+}
+
+#advantages {
+    padding: 6em 0;
+
+    .advantages {
+        text-align: center;
+        margin: 5em 0 0 0;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        .card {
+            border: none;
+
+            i {
+                font-size: 3em;
+            }
+
+            .card-title {
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+#mentor {
+
+    img {
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        list-style: none;
+        margin: 10px 0;
+    }
+
+    li:before {
+        content: ' ';
+        display: inline-block;
+        height: 17px;
+        width: 20px;
+        background: url('../img/li.png') no-repeat;
+        background-position: left 2px;
+    }
+}
+
+#selection {
+    margin: 5em 0;
+
+    .selections {
+        text-align: center;
+
+        .card {
+            background: $card-color;
+            padding: 2rem 0;
+            border: 0;
+            border-radius: 0;
+
+            img {
+                width: 36px;
+                height: 40px;
+                margin: 0 auto;
+            }
+
+            .w-20 {
+                width: 20px;
+                height: 25px;
+            }
+
+            .w-40 {
+                width: 40px;
+            }
+
+            .card-body {
+                padding: 1.75rem;
+
+                .card-title {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+#reviews {
+    margin: 6em 0;
+
+    .reviews {
+        margin-top: 5em;
+
+        .card {
+            border: 0;
+
+            &:before {
+                content: '\'\'';
+                position: absolute;
+                top: -15px;
+                left: -5px;
+                font-weight: 400;
+                font-style: italic;
+                font-size: 90px;
+                font-family: serif;
+                color: $quote-color;
+                z-index: 1;
+            }
+
+            .card-body {
+                z-index: 15;
+
+                .card-text {
+                    font-style: italic;
+                    line-height: 1.8em;
+                    letter-spacing: .01em;
+                }
+
+                .card-footer-text {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#questions {
+    background: url('/img/land3.jpg') center top no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: $light-color;
+
+    .questions-photo-filter {
+        padding: 6em 0;
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+
+        p {
+            font-weight: 300;
+            margin-bottom: 4em;
+        }
+
+        .col {
+            margin-bottom: 1em;
+
+            input {
+                border-color: $light-color;
+                background-color: transparent;
+                border-radius: 0;
+
+                &::placeholder {
+                    color: $light-color;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: $dark-color;
+    padding: 2em 0;
+
+    p {
+        margin: 0;
+    }
+}
+
+@media (min-width: 991px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .start-form {
+        margin-top: 0em;
+    }
+
+    #mentor img {
+        margin-bottom: 0;
+    }
+
+    #questions {
+        .col {
+            margin-bottom: 0;
+        }
+    }
+}
