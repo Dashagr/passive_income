@@ -20,7 +20,8 @@ h1 {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -125,7 +126,8 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -143,7 +145,8 @@ textarea {
 
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -201,8 +204,12 @@ h2 {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -213,6 +220,8 @@ h2:after {
   width: 65px;
   background: #0d7ff2;
   bottom: 0px;
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
 h2:hover:after {
@@ -224,10 +233,16 @@ h3 {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 1em;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-size: 1.4em;
 }
 h3:after {
@@ -237,6 +252,8 @@ h3:after {
   width: 65px;
   background: #0e7ff9;
   bottom: 0px;
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
 h3:hover:after {
@@ -251,7 +268,7 @@ h4 {
 }
 
 header {
-  background: url("/img/skyscrap1.jpg") center no-repeat #000;
+  background: url("../img/skyscrap1.jpg") center no-repeat #000;
   background-size: cover;
   padding: 3em;
   width: 100%;
@@ -273,6 +290,18 @@ header form label {
 }
 header form .form-control {
   padding: 1.2em;
+}
+header form .form-control::-webkit-input-placeholder {
+  opacity: 0.8;
+}
+header form .form-control::-moz-placeholder {
+  opacity: 0.8;
+}
+header form .form-control:-ms-input-placeholder {
+  opacity: 0.8;
+}
+header form .form-control::-ms-input-placeholder {
+  opacity: 0.8;
 }
 header form .form-control::placeholder {
   opacity: 0.8;
@@ -296,16 +325,26 @@ header #timer {
   letter-spacing: 0.25em;
 }
 header #timer .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-align: center;
 }
 header #timer .date:not(:nth-child(4)):after {
   content: " : ";
 }
 header #timer .date .time-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   justify-items: center;
   margin: 0 0.5em;
   letter-spacing: 0.05em;
@@ -329,8 +368,12 @@ header #timer .date .time-section .units {
 }
 
 .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .action .start__longer {
   border-radius: 0px;
@@ -351,7 +394,8 @@ header #timer .date .time-section .units {
   text-align: center;
   margin: 5em 0 0 0;
   max-width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 #advantages .advantages .card {
   border: none;
@@ -447,15 +491,20 @@ header #timer .date .time-section .units {
   letter-spacing: 0.01em;
 }
 #reviews .reviews .card .card-body .card-footer-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 #reviews .reviews .card .card-body .card-footer-text span {
   font-weight: 700;
 }
 
 #questions {
-  background: url("/img/land3.jpg") center top no-repeat;
+  background: url("../img/land3.jpg") center top no-repeat;
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -476,6 +525,18 @@ header #timer .date .time-section .units {
   border-color: #fff;
   background-color: transparent;
   border-radius: 0;
+}
+#questions .questions-photo-filter .col input::-webkit-input-placeholder {
+  color: #fff;
+}
+#questions .questions-photo-filter .col input::-moz-placeholder {
+  color: #fff;
+}
+#questions .questions-photo-filter .col input:-ms-input-placeholder {
+  color: #fff;
+}
+#questions .questions-photo-filter .col input::-ms-input-placeholder {
+  color: #fff;
 }
 #questions .questions-photo-filter .col input::placeholder {
   color: #fff;
